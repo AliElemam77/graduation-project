@@ -22,7 +22,7 @@ class ContactUsPage extends StatelessWidget {
           children: [
             CurvedImageContanier(image: 'assets/images/contactus.png'),
             Positioned(
-              left: 39.w,
+              left: 52.w,
               top: 285.h,
               child: CustomContanier(
                 height: 310.h,

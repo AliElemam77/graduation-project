@@ -22,7 +22,7 @@ class AboutUsPage extends StatelessWidget {
           children: [
             CurvedImageContanier(image: 'assets/images/aboutus.png'),
             Positioned(
-              left: 39.w,
+              left: 52.w,
               top: 285.h,
               child: CustomContanier(
                 height: 335.h,

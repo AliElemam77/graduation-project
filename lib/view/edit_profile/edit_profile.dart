@@ -2,6 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:graduation_project/view/rate_us/rate_us.dart';
+import 'package:graduation_project/view/volunteer_page/volunteer_page.dart';
+import 'package:image_picker/image_picker.dart';
+
 import 'package:graduation_project/common/app_style.dart';
 import 'package:graduation_project/common/curved_image_contanier.dart';
 import 'package:graduation_project/common/custom_buttom.dart';
@@ -9,9 +13,7 @@ import 'package:graduation_project/common/custom_container.dart';
 import 'package:graduation_project/common/reusable_text.dart';
 import 'package:graduation_project/common/text_field.dart';
 import 'package:graduation_project/constant/constant.dart';
-import 'package:graduation_project/view/about_us/about_us_page.dart';
-import 'package:graduation_project/view/contact_us/contact_us_page.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:graduation_project/view/pay_page/payment_page.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -52,7 +54,7 @@ class _EditProfileState extends State<EditProfile> {
             children: [
               CurvedImageContanier(image: 'assets/images/editprofile.png'),
               Positioned(
-                left: 39.w,
+                left: 52.w,
                 top: 280.h,
                 child: CustomContanier(
                   height: kheight * 0.65,
@@ -79,22 +81,27 @@ class _EditProfileState extends State<EditProfile> {
                           height: 10,
                         ),
                         ReusableTextField(
+                          prefix: Image.asset('assets/images/preffix_icon.png'),
                           hintText: 'الاسم بالكامل',
                           controller: _textController,
                         ),
                         ReusableTextField(
+                          prefix: Image.asset('assets/images/preffix_icon.png'),
                           hintText: 'البريد الالكتروني',
                           controller: _textController,
                         ),
                         ReusableTextField(
+                          prefix: Image.asset('assets/images/preffix_icon.png'),
                           hintText: 'كلمة المرور',
                           controller: _textController,
                         ),
                         ReusableTextField(
+                          prefix: Image.asset('assets/images/preffix_icon.png'),
                           hintText: 'العنوان',
                           controller: _textController,
                         ),
                         ReusableTextField(
+                          prefix: Image.asset('assets/images/preffix_icon.png'),
                           hintText: 'رقم الهاتف',
                           controller: _textController,
                         ),
@@ -103,7 +110,7 @@ class _EditProfileState extends State<EditProfile> {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => const ContactUsPage(),
+                                builder: (context) => const RateUsPage(),
                               ),
                             );
                           },
